@@ -1,0 +1,16 @@
+.btn {
+	display: inline-block;
+	background-color: transparent;
+	border: 0.1rem solid $first-color;
+	&-lg {
+		padding: 1.25rem 6rem;
+		border-radius: 10rem;
+		font-size: 1.5rem;
+		@media only screen and (max-width: 1199px) {
+			padding: 1rem 3rem;
+		}
+	}
+	&-bg-white {
+		background-color: white;
+	}
+}

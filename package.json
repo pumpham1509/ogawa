@@ -1,0 +1,16 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scsstocss": "node-sass assets/sass/main.scss assets/css/style.css -w"
+  },
+  "author": "Phạm Văn Hào",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "node-sass": "^9.0.0",
+    "swiper": "^11.1.14"
+  }
+}

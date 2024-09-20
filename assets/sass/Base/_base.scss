@@ -1,0 +1,160 @@
+// Settting cho *, html, body
+*,
+*::after,
+*::before {
+	list-style: none;
+	border: none;
+	outline: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+	font-size: 1.6rem;
+	color: $first-color;
+	font-weight: $font-w-300;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1320px;
+	padding: 0 15px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+	.wrapper {
+		max-width: 540px;
+	}
+}
+@media (min-width: 768px) {
+	.wrapper {
+		max-width: 720px;
+	}
+}
+@media (min-width: 992px) {
+	.wrapper {
+		max-width: 960px;
+	}
+}
+@media (min-width: 1200px) {
+	.wrapper {
+		max-width: 1140px;
+	}
+}
+@media (min-width: 1400px) {
+	.wrapper {
+		max-width: 1320px;
+	}
+}
+
+section {
+	padding: 3rem 0;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+	color: $first-color;
+}
+img {
+	object-fit: cover;
+}
+
+.overflow {
+	position: fixed;
+	bottom: 0;
+	top: 0;
+	width: 100%;
+	right: -100%;
+	background-color: rgba($color: $third-bg-color, $alpha: 0.7);
+	z-index: 500;
+	transition: 0.5s ease;
+	cursor: pointer;
+	@media only screen and (min-width: 1200px) {
+		right: -100%;
+	}
+}
+
+.popup-promotion {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1500;
+	background-color: rgba($color: $second-bg-color, $alpha: 0.7);
+	display: none;
+	opacity: 0;
+	transition: display 1s ease;
+	transition: opacity 1s ease;
+	cursor: pointer;
+	&-wrapper {
+		overflow: hidden;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		padding: 4rem 6rem;
+		background-color: $white-bg;
+		box-shadow: 0 0 5px rgba($color: $third-bg-color, $alpha: 0.7);
+		border-radius: 2rem;
+		display: flex;
+		gap: 30px;
+		width: 70%;
+		max-height: 30rem;
+	}
+	&-title {
+		color: $main-color;
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+	&-des {
+		font-size: 1.6rem;
+		margin-bottom: 2rem;
+	}
+	&-img {
+		width: 100%;
+		max-width: 20rem;
+	}
+	&-toggle {
+		position: absolute;
+		top: 0.5rem;
+		right: 2rem;
+		font-size: 3rem;
+		cursor: pointer;
+	}
+	@media only screen and (max-width: 1199px) {
+		&-wrapper {
+			padding: 2rem 4rem;
+		}
+	}
+	@media only screen and (max-width: 775px) {
+		&-wrapper {
+			padding: 1rem 2rem;
+			gap: 10px;
+		}
+		&-title {
+			font-size: 2rem;
+		}
+		&-des {
+			font-size: 1.4rem;
+			margin-bottom: 1rem;
+		}
+		&-img {
+			max-width: 10rem;
+		}
+	}
+	@media only screen and (max-width: 575px) {
+		&-img {
+			max-width: 15rem;
+		}
+	}
+}
